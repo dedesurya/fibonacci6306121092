@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Fibonacci
+{
+	public static void main(String[] args)
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.print("input bilangan : ");
+		int bilangan = s.nextInt();
+		for(int i=1;i<=bilangan;i++)
+			System.out.print(fibonacci(i) + " ");
+		System.out.println();
+	}
+
+	private static int fibonacci(int bilangan)
+	{
+		int f;
+		if(bilangan==1 || bilangan==2)
+			f=1;
+		else
+			f = fibonacci(bilangan-1) + fibonacci(bilangan-2);
+		return f;
+	}
+}
